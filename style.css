@@ -467,6 +467,9 @@ button:hover {
     cursor: pointer;
   }
 
+   .pane{
+    margin-bottom: 2%;
+  }
 }
 
 
