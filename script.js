@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const adImage = document.getElementById('ad-image');
     const dotsContainer = document.getElementById('dots');
 
-    const images = ['burger.jpg', 'download.jpeg', 'logo.jpg'];
+    const images = ['burger-meal.jpg', 'burger.jpg', 'wings.jpg','ribs.jpg'];
     let currentImageIndex = 0;
     let isPlaying = true;
     let intervalId;
@@ -169,6 +169,9 @@ function openNav(){
     displayNavEl.style.display = "contents";
     var screen = document.getElementById("small-scr");
     screen.style.backgroundColor = "forestgreen";
+
+    var navListEl = document.getElementById("navList");
+    navListEl.style.padding = "6%";
 }
 
 function closeNav(){
