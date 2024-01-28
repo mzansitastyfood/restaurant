@@ -371,9 +371,11 @@ function numbers(){
 
         var sign = true;
         var howHungryEl = howHungryEl = document.getElementById('left');;
+        var howHungryElRight = document.getElementById('right');
        
         howHungryEl.innerHTML = ''; // Delete previous innerHtml
-
+        howHungryElRight.innerHTML = ''; // delete the one on the right too
+        
         image_list.forEach(image => {
            var inner_of_hungry =  addImage(image,all_images[image].type, all_images[image].name,all_images[image].description,all_images[image].amount);
             
