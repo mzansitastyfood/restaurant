@@ -10,6 +10,142 @@
 </head>
 <body>
 
+  <!-- Nav bar -->
+  <div class="nav">
+    <div id="text">
+
+        <span id="t10">M</span>
+        <span id="t11">z</span>
+        <span id="t12">a</span>
+        <span id="t13">n</span>
+        <span id="t14">s</span>
+        <span id="t15">'</span>
+        <span id="t16"></span>
+        <span id="t17">T</span>
+        <span id="t18">a</span>
+        <span id="t19">s</span>
+        <span id="t20">t</span>
+        <span id="t21">y</span>
+        <span id="t22"></span>
+        <span id="t23">F</span>
+        <span id="t24">o</span>
+        <span id="t25">o</span>
+        <span id="t26">d</span>
+
+        <div id="icon">
+            <img src="logo.jpg" height="50px" width="50px">
+        </div>
+        
+    </div>
+
+     <!-- Navigation for a smaller screen -->
+     <div id="small-scr" class="smaller-screen">
+        <div style="margin: 2%;">
+            <img id="nav-open" class="nav-menu-open" src="../menu.svg" alt="Open Navigation">
+            
+            <nav>
+                <img id="nav-close" class="nav-menu-exit" src="../exit.svg" alt="Close Navigation">
+                <ul class="nav-list">
+                    <li id="navList"><a  href="../menu/menu.html">Menu</a></li>
+                    <li id="navList"><a  href="../cart/cart.html">Cart</a></li>
+                    <li id="navList"><a  href="../payment/payment.html">Payment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                </ul>
+            </nav>
+        </div>
+       
+    </div>
+
+    <div class="menu">
+        <a href="../index.html">Home</a>
+    </div>     
+   
+    <div class="sign-in">
+        <a href="../login/login.html">Sign In</a>
+    </div>
+</div>
+<!-- End of nav bar -->
+
+<!-- The content container/ body -->
+<div class="container">
+  <div class="heading">
+    <h4>Register on our system 
+      <br>to receive <br>monthly promotions!</h4>  
+  </div>
+  <div class="center">
+            
+    <form [formGroup]="studentForm" (ngSubmit)="registerStudent()">
+        <div class="inside-form">
+
+          <div class="name">
+              <div>
+                <div> 
+                  <label for="name">Name: <span *ngIf="studentForm?.get('name')?.invalid" [ngStyle]="{'color': 'red'}">*</span></label>
+                </div>
+                <div>
+                  <input id="name" type="text" formControlName="name">
+                </div>
+              </div>
+             
+              <div *ngIf="studentForm?.get('name')?.invalid&&studentForm?.get('name')?.touched">Name must contain only letters</div>
+          </div>
+          
+          <div class="email"> 
+              <div> 
+                <div>
+                  <label for="email">Email: <span *ngIf="studentForm?.get('email')?.invalid" [ngStyle]="{'color': 'red'}">*</span></label>
+                </div>
+                <div>
+                  <input id="email" type="email" formControlName="email">
+                </div>
+              </div>
+             
+              <div *ngIf="studentForm?.get('email')?.invalid&&studentForm?.get('email')?.touched">Email is invalid</div>
+          </div>
+        
+          <div class="password">
+              <div>
+                <div>
+                  <label for="password">Password: <span *ngIf="studentForm?.get('password')?.invalid" [ngStyle]="{'color': 'red'}">*</span></label>
+                </div>
+                <div>
+                  <input id="password" [type]="changetype?'password':'text'" formControlName="password">
+                </div>
+              </div>
+             
+              <div *ngIf="studentForm?.get('password')?.invalid&&studentForm?.get('password')?.touched">Password is invalid</div>
+          </div>
+          
+          <div class="confirmPassword"> 
+                <div>
+                  <label for="confirmPassword">Confirmation Password: <span *ngIf="studentForm?.get('confirmPassword')?.invalid" [ngStyle]="{'color': 'red'}">*</span></label>
+                </div>
+                <div>
+                  <input id="confirmPassword" [type]="confirmChangetype?'password':'text'" formControlName="confirmPassword">
+                </div>
+             
+              <div *ngIf="studentForm?.get('confirmPassword')?.invalid&&studentForm?.get('confirmPassword')?.touched">Confirmation Password is invalid</div>
+              <div>
+                  <span *ngIf="!passwordTheSame()" style="color: red; width:455px;">The passwords must be the same</span>
+              </div>
+          </div>
+          
+          <div class="sign_up_button">
+              <div> 
+                <h5 style="color: rgb(25, 160, 32);">Complete the form to enable button.</h5>
+              </div>
+              <div>
+                <button type="submit" [disabled]="!studentForm.valid" [ngStyle]="{'color':'white'}">Sign up</button>
+              </div>
+              <div class="other_Or"><h6>or</h6></div>
+              <div style="margin-top: 15%;"><a [routerLink]="['/login']" style="color: blue;"><u>Log in</u></a></div>
+          </div>
+          <div *ngIf="duplicate" style="color: red;">The email is already in the system </div>
+        </div> 
+        
+    </form>
+            
+  </div>
+</div>
 
 </body>
 </html>

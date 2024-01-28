@@ -1,9 +1,45 @@
 document.addEventListener('DOMContentLoaded', function () {
     const adContainer = document.getElementById('ad-container');
     const adImage = document.getElementById('ad-image');
-    const dotsContainer = document.getElementById('dots');
+    const imageType = document.getElementById('type');
+    const imageName = document.getElementById('meal-name');
+    const imageDescr = document.getElementById('meal-description');
+    const imageAmount = document.getElementById('meal-amount');
 
+    const dotsContainer = document.getElementById('dots');
+   
     const images = ['burger-meal.jpg', 'burger.jpg', 'wings.jpg','ribs.jpg'];
+
+    var image_dictionary = {
+        'burger-meal.jpg': {
+            'type': "New!",
+            'name': "Burger Mate",
+            'description': "1 big burger and side choice.",
+            'amount': "R49,99"
+        ,
+        },
+        'burger.jpg': {
+            'type': "Limited Edition!",
+            'name': "Mega Burger Wings",
+            'description': "1 big burger with ultimate wings.",
+            'amount': "R129,99"
+        },
+        'wings.jpg': {
+            'type': "Recommended!",
+            'name': "Dipped wings with sause",
+            'description': "6 dipped wings.",
+            'amount': "R55,99"
+        },
+        'ribs.jpg': {
+            'type': "Limited Edition!",
+            'name': "Ribs and Chips",
+            'description': "1 rib burger and ultimate chips.",
+            'amount': "R54,99"
+        }
+    }
+
+    
+
     let currentImageIndex = 0;
     let isPlaying = true;
     let intervalId;
@@ -55,7 +91,14 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("prev").addEventListener("click",showPrevImage);
 
     function updateImage() {
-        adImage.src = images[currentImageIndex];
+        var currentImage = Object.keys(image_dictionary)[currentImageIndex];
+        adImage.src = "images/"+currentImage;
+        imageType.textContent =  image_dictionary[currentImage]['type'];
+        imageName.textContent =  image_dictionary[currentImage]['name'];
+        imageDescr.textContent =  image_dictionary[currentImage]['description'];
+        imageAmount.textContent =  image_dictionary[currentImage]['amount'];
+
+
         adImage.style.opacity = 1;
         updateDots();
     }
@@ -184,4 +227,177 @@ function closeNav(){
 function displayNav(){
 
 }
+
+
+// Running numbers variables
+const run_numbers = document.getElementById('numbers-run');
+const snackButton = document.getElementById('snack-button');
+const hungryButton = document.getElementById('hungry-button');
+const starvingButton = document.getElementById('starving-button');
+
+
+// Running the numbers continued functions 
+run_numbers.addEventListener('click', numbers);
+snackButton.addEventListener('click',snackButtonClick);
+hungryButton.addEventListener('click', hungryButtonClick);
+starvingButton.addEventListener('click', starvingButtonClick);
+
+var click_which_button_food = 'snack';
+
+function snackButtonClick(){
+    click_which_button_food = 'snack'
+}
+
+function hungryButtonClick(){
+    click_which_button_food = 'hungry';
+}
+
+function starvingButtonClick(){
+    click_which_button_food = 'starving';
+}
+
+var all_images = {
+    'burger-meal.jpg': {
+        'type': "New!",
+        'name': "Burger Mate",
+        'description': "1 big burger and side choice.",
+        'amount': "R49,99"
+    ,
+    },
+    'burger.jpg': {
+        'type': "Limited Edition!",
+        'name': "Mega Burger Wings",
+        'description': "1 big burger with ultimate wings.",
+        'amount': "R129,99"
+    },
+    'wings.jpg': {
+        'type': "Recommended!",
+        'name': "Dipped wings with sause",
+        'description': "6 dipped wings.",
+        'amount': "R55,99"
+    },
+    'ribs.jpg': {
+        'type': "Limited Edition!",
+        'name': "Ribs and Chips",
+        'description': "1 rib burger and ultimate chips.",
+        'amount': "R54,99"
+    }
+}
+
+
+var left_or_right = 1;
+
+function addImage(image,type,name,description,amount){
+    var here = ` 
+    <div class="pane">
+        <img src="images/${image}" alt="Image">
+    </div>
+    <div id="type">${type}</div>
+    <div id="meal-name">${name}</div>
+    <br>
+    <div id="meal-description">${description}</div>
+    <div id="meal-amount">${amount}</div>
+    <button id="meal-order-button">Order Now →</button>`;
+
+    return here;
+}
+
+var slider_value = 0;
+var clicked_food = '';
+
+var image_list = [];
+
+function numbers(){
+
+    var how_hungry_el = document.getElementById('how-hungry-container');
+    how_hungry_el.style.display = 'contents';
+    how_hungry_el.style.marginTop = '5%';
+    how_hungry_el.style.backgroundColor = 'white';
+    how_hungry_el.style.display = 'flex';
+    how_hungry_el.style.alignContent = 'center';
+    how_hungry_el.style.alignItems = 'center';
+    how_hungry_el.style.justifyContent = 'center';
+    how_hungry_el.style.textAlign = 'center';
+    how_hungry_el.style.width = '80%';
+    how_hungry_el.style.padding = '2.5%';
+    how_hungry_el.style.marginLeft = '5%';
+    how_hungry_el.style.marginRight = '5%';
+
+    console.log("New "+ clicked_food);
+    console.log("Actual "+click_which_button_food);
+    console.log("Slider value "+slider_value);
+    console.log("Actual slider "+slider.value);
+    console.log("------------------------------")
+
+
+    // snack if-statements
+    if(slider.value==1 && click_which_button_food == 'snack'||click_which_button_food == ''){
+        image_list = ['wings.jpg'];
+    }
+    if(slider.value>1 && slider.value<5 && click_which_button_food == 'snack'){
+        image_list = ['wings.jpg'];
+    }
+    if(slider.value>5 && click_which_button_food == 'snack'){
+        image_list = ['burger.jpg'];
+    }
+
+    // hungry if-statements
+    if(slider.value==1 && click_which_button_food == 'hungry'){
+        image_list = ['burger-meal.jpg','ribs.jpg'];
+
+    }
+    if(slider.value>1 && slider.value<5 && click_which_button_food == 'hungry'){
+        image_list = ['burger.jpg'];
+
+    }
+    if(slider.value>5 && click_which_button_food == 'hungry'){
+        image_list = ['burger.jpg'];
+    }
+
+    // starving if-statements
+    if(slider.value==1 && click_which_button_food == 'starving'){
+        image_list = ['burger.jpg'];
+    }
+    if(slider.value>1 && slider.value<5 && click_which_button_food == 'starving'){
+        image_list = ['burger.jpg'];
+    }
+    if(slider.value>5 && click_which_button_food == 'starving'){
+        image_list = ['burger.jpg'];
+    }
+
+
+    if(!(slider_value === slider.value && clicked_food.trim()===click_which_button_food.trim())){
+       
+
+        var sign = true;
+        var howHungryEl = howHungryEl = document.getElementById('left');;
+       
+        howHungryEl.innerHTML = ''; // Delete previous innerHtml
+
+        image_list.forEach(image => {
+           var inner_of_hungry =  addImage(image,all_images[image].type, all_images[image].name,all_images[image].description,all_images[image].amount);
+            
+            // Populate images left and right
+            
+            if(sign){
+                howHungryEl = document.getElementById('left');
+            }
+            else{
+                howHungryEl = document.getElementById('right');
+            }
+            sign = !sign;
+            howHungryEl.innerHTML +=inner_of_hungry;
+        });
+
+       
+    }
+   
+    slider_value = slider.value;
+    clicked_food = click_which_button_food.toString();
+
+   
+    
+}
+
+
 

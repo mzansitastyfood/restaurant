@@ -10,7 +10,7 @@ body {
 
 .nav{
   background-color: rgb(0, 0, 0);
-  height: 150px;
+  height: 120px;
   position: fixed;
   top: 0;
   left: 0;
@@ -86,7 +86,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  margin-top: 150px;
+  margin-top: 120px;
   position: fixed;
   z-index: 99;
 }
@@ -112,7 +112,7 @@ body {
 
 
 .advert-container{
-  background: url(burger.jpg) no-repeat center top;
+  background: url(images/burger.jpg) no-repeat center top;
   background-size: 100% 100%; /* Stretch the image to fill the entire width and height of the container */
   width: 100%;
   height: 500px;  
@@ -120,11 +120,11 @@ body {
   color:white;
   position: absolute;
   top:0;
-  margin-top: 211px;
+  margin-top: 181px;
 }
 
 .ad-band{
-  margin-top: 712px;
+  margin-top: 682px;
   color: white;
   width: 100%;
   height: 100px;  
@@ -145,18 +145,64 @@ body {
 .ad-body{
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: forestgreen;
 }
 
 #ad-container {
-  width: 600px;
-  height: 400px;
+  width: 500px;
+  height: 300px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: relative;
+}
+
+.menu-descr{
+  width: 500px;
+  height: 200px;
+  background-color: white;
   margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-descr button {
+  margin-top: 3%;
+}
+
+.menu-descr #type{
+  color: forestgreen;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu-descr #meal-name{
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.menu-descr #meal-amount{
+  color: forestgreen;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu-descr #meal-order-button{
+  background-color: #218D1F;
+    color: white;
+    font-weight: bold;
+    width: 195px;
+    height: 40px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
 }
 
 #ad-image {
@@ -201,6 +247,9 @@ body {
 #prev, #next, #play-pause {
   cursor: pointer;
   user-select: none;
+  padding: 20px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .outer-slider-container{
@@ -209,6 +258,69 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.how-hungry-container{
+  margin-top: 5%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  padding: 2.5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+
+.how-hungry-container .left{
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.how-hungry-container .right{
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+
+.how-hungry-container #type{
+  color: forestgreen;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.how-hungry-container #meal-name{
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.how-hungry-container #meal-amount{
+  color: forestgreen;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.how-hungry-container #meal-order-button{
+  background-color: #218D1F;
+    color: white;
+    font-weight: bold;
+    width: 195px;
+    height: 40px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
 }
 
 
@@ -235,7 +347,6 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  /* background-color: #4CAF50; */
   cursor: grab;
   pointer-events: auto; /* Allow the thumb to be draggable */
 }
@@ -248,7 +359,6 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  /* background-color: #4CAF50; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,17 +393,29 @@ body {
   background-color: rgb(181, 202, 160);
   color: black;
   margin-bottom: 10%;
+  border:solid;
+  border-color: grey;
 }
 
 
 
-.run-numbers-button button{
+.run-numbers-button .run-numbers{
   background-color: forestgreen;
   width: 200px;
   height: 80px;
   color: white;
   font-weight: bold;
   font-size: 16px;
+}
+
+.how-hungry-container .left img{
+  width: 80%;
+  height: 300px;
+}
+
+.how-hungry-container .right img{
+  width: 80%;
+  height: 300px;
 }
 
 .chosen-images{
@@ -305,28 +427,46 @@ body {
 
 .small-pane{
   flex:1;
-  padding: 5px; /* Add padding for spacing */
   text-align: center; /* Center align content*/
+  line-height: 400%; /* 56px */
 }
 
 .big-pane{
   flex:1;
-  padding: 5px; /* Add padding for spacing */
   text-align: center; /* Center align content*/
+  line-height: 200%; /* 56px */
+  margin-left: 5%;
 }
+
+
 
 .pane{
   flex: 1; /* Each column takes up an equal amount of space */
-  padding: 10px; /* Add padding for spacing */
   text-align: center; /* Center align content*/
-  /* overflow: hidden; */
+  margin-bottom: 5%;  
+}
+
+
+.big-pane .column .column-pane .row-pane .pane{
+  padding-bottom: 20%;
+  margin-right: 5%;
+  background-color: #218D1F;
+  
+}
+
+
+.small-pane .row-pane .pane{
+  padding-bottom: 40%;
+  margin-right: 5%;
+  background-color: #218D1F;
+  
 }
 
 .pane img{
   max-width: 100%; /* Ensure images don't exceed column width */
   height: 100%; /* Set the height to 100% of the width */
   object-fit: cover; /* Maintain aspect ratio and fill the space */
-
+  overflow: hidden;
   background: var(--shades-white, #FFF);
   box-shadow: 0px 8px 16px 0px rgba(54, 54, 54, 0.10);
 }
@@ -335,31 +475,6 @@ body {
   display: flex;
 }
 
-
-/* .ad-body{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: forestgreen;
-}
-
-#ad-container {
-  width: 600px;
-  height: 400px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  position: relative;
-  margin-bottom: 5%;
-}
-
-#ad-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.5s ease-in-out;
-} */
-
 .column{
   display: flex;
   flex-direction: column;
@@ -367,17 +482,17 @@ body {
 
 .column-pane{
   flex: 1;
+
 }
 
 .small-pane-img-descr{
   width: 100wh;
   color: black;
-  background-color: yellowgreen;
+  background-color: #218D1F;
 }
 
 .footer{
   background-color: black;
-  margin-top: 5%;
   align-content: center;
   align-items: center;
   text-align: center;
@@ -397,6 +512,7 @@ a{
 /* Fixing the buttons */
 button{
   cursor: pointer;
+  border: none;
 }
 
 button:hover {
@@ -416,6 +532,26 @@ button:hover {
   padding: 6%;
 }
 
+.address{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  width: wh;
+  background-color: #bbb;
+  padding: 2%;
+}
+
+.address div{
+  text-align: center;
+}
+
+#how-hungry-container{
+  display: none;
+}
+
 @media (max-width: 706px) {
 
   .menu, .sign-in{
@@ -424,7 +560,7 @@ button:hover {
 
   .nav{
     background-color: rgb(0, 0, 0);
-    height: 150px;
+    height: 200px;
     position: fixed;
     top: 0;
     left: 0;
@@ -443,14 +579,37 @@ button:hover {
     position: absolute;
     top: 130px;
     left: -15%;
-    /* margin-left: 200px; */
   }
 
   #icon{
     transform: rotate(-214deg);
-    /* position: relative; */
     left: 45%;
     top: 85px;
+  }
+
+  .first-container{
+    margin-top: 150px;
+  }
+
+  #ad-container {
+    width: 100%;
+  }
+
+  .menu-descr{
+    width: 100%;
+  }
+
+  .advert-container{
+    height: 300px;  
+  }
+
+  .ad-band{
+    margin-top: 482px;
+    height: 200px;  
+  }
+  
+  .ad-band-title{
+    margin: 5px;
   }
 
   .chosen-images{
@@ -499,6 +658,25 @@ button:hover {
 
   .pane{
     margin-bottom: 2%;
+  }
+
+  .chosen-images-smaller-screen .pane{
+    padding-bottom: 2.5%;
+  margin-right: 5%;
+  background-color: #218D1F;
+  }
+
+  .how-hungry-container{
+    flex-direction: column;
+  }
+
+  .left{
+    margin-bottom: 15%;
+  }
+
+  .pane img{
+    min-width: 295px;
+  
   }
 
 }

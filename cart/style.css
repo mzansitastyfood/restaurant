@@ -1,187 +1,272 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    background-color: rgb(181, 202, 160);
-    width: wh;
-  
-  }
-     
-  
-  .nav{
-    background-color: rgb(0, 0, 0);
-    height: 150px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100wh;
-    display:flex;
-    color: white;
-    z-index: 99;
-  }
-  
-  #text {
-    transform: rotate(214deg);
-    position: absolute;
-    top: 130px;
-    left: 30px;
-    margin-left: 200px;
-  }
-  
-  #text span {
-    font-size: px;
-    height: 170px;
-    position: absolute;
-  }
-  
-  #icon{
-    transform: rotate(-214deg);
-    position: relative;
-    top: 85px;
-  }
-  
-  .menu{
-    position: absolute;
-    left: 0;
-    margin-top: 50px;
-    margin-left: 450px;
-  }
-  
-  .sign-in{
-    position: absolute;
-    right: 0;
-    margin-top: 50px;
-    margin-right: 50px;
-  }
-  
-  
-  #t10 { transform: rotate(97deg); }
-  #t11 { transform: rotate(104deg); }
-  #t12 { transform: rotate(110deg); }
-  #t13 { transform: rotate(116deg); }
-  #t14 { transform: rotate(122deg); }
-  #t15 { transform: rotate(128deg); }
-  #t16 { transform: rotate(134deg); }
-  #t17 { transform: rotate(140deg); }
-  #t18 { transform: rotate(146deg); }
-  #t19 { transform: rotate(152deg); }
-  #t20 { transform: rotate(158deg); }
-  #t21 { transform: rotate(164deg); }
-  #t22 { transform: rotate(170deg); }
-  #t23 { transform: rotate(176deg); }
-  #t24 { transform: rotate(182deg); }
-  #t25 { transform: rotate(188deg); }
-  #t26 { transform: rotate(194deg); }
-  
-  .first-container {
-    width: 100wh;
-    height: 50px;
-    background-color: forestgreen;
-    display: flex;
-    justify-content: center; /* Horizontal centering */
-    align-items: center; /* Vertical centering */
-    color: white;
-    padding: 5px;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-top: 150px;
-    position: fixed;
-    z-index: 99;
-  }
-  
-  /* Slogan style */
-  .first-container .company-slogan{
-    font-weight:bolder;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-  }
-  
-  /* Button next to slogan style */
-  .first-container .company-slogan .start-order-button{
-    color:white;
-    background-color: red;
-    border: none;
-    border-radius: 5em;
-    padding: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: rgb(181, 202, 160);
+  width: wh;
 
-  a{
-    text-decoration: none;
-    color: white;
-  }
+}
+   
 
-  /* Fixing the buttons */
+.nav{
+  background-color: rgb(0, 0, 0);
+  height: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100wh;
+  display:flex;
+  color: white;
+  z-index: 99;
+}
+
+#text {
+  transform: rotate(214deg);
+  position: absolute;
+  top: 130px;
+  left: 30px;
+  margin-left: 200px;
+}
+
+#text span {
+  font-size: px;
+  height: 170px;
+  position: absolute;
+}
+
+#icon{
+  transform: rotate(-214deg);
+  position: relative;
+  top: 85px;
+}
+
+.menu{
+  position: absolute;
+  left: 0;
+  margin-top: 50px;
+  margin-left: 450px;
+}
+
+.sign-in{
+  position: absolute;
+  right: 0;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+
+#t10 { transform: rotate(97deg); }
+#t11 { transform: rotate(104deg); }
+#t12 { transform: rotate(110deg); }
+#t13 { transform: rotate(116deg); }
+#t14 { transform: rotate(122deg); }
+#t15 { transform: rotate(128deg); }
+#t16 { transform: rotate(134deg); }
+#t17 { transform: rotate(140deg); }
+#t18 { transform: rotate(146deg); }
+#t19 { transform: rotate(152deg); }
+#t20 { transform: rotate(158deg); }
+#t21 { transform: rotate(164deg); }
+#t22 { transform: rotate(170deg); }
+#t23 { transform: rotate(176deg); }
+#t24 { transform: rotate(182deg); }
+#t25 { transform: rotate(188deg); }
+#t26 { transform: rotate(194deg); }
+
+.first-container {
+  width: 100wh;
+  height: 50px;
+  background-color: forestgreen;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  color: white;
+  padding: 5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 120px;
+  position: fixed;
+  z-index: 99;
+}
+
+/* Slogan style */
+.first-container .company-slogan{
+  font-weight:bolder;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Button next to slogan style */
+.first-container .company-slogan .start-order-button{
+  color:white;
+  background-color: red;
+  border: none;
+  border-radius: 5em;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Fixing the buttons */
 button{
-  cursor: pointer;
+cursor: pointer;
 }
 
 button:hover {
-  transform: scale(1.05); /* Scale the button to 105% of its original size */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+transform: scale(1.05); /* Scale the button to 105% of its original size */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
 }
 
 
 .smaller-screen{
-  display: none;
+display: none;
 }
 
 .chosen-images-smaller-screen{
-  display: none;
+display: none;
+}
+
+.nav-list li{
+padding: 6%;
+}
+
+
+.advert-container{
+background: url(/images/burger.jpg) no-repeat center top;
+background-size: 100% 100%; /* Stretch the image to fill the entire width and height of the container */
+width: 100%;
+height: 300px;  
+position: absolute;
+color:white;
+position: absolute;
+top:0;
+margin-top: 181px;
+}
+
+.footer{
+background-color: black;
+align-content: center;
+align-items: center;
+text-align: center;
+font-size: 20px;
+font-weight: bold;
+font-style: italic;
+color: white;
+padding: 2%;
+position: absolute;
+bottom: 0;
+right: 0;
+left: 0;
+}
+
+a{
+text-decoration: none;
+color: white;
+}
+
+.row-pane{
+display: flex;
+}
+
+.pane{
+flex: 1; /* Each column takes up an equal amount of space */
+text-align: center; /* Center align content*/
+margin-bottom: 5%;  
 }
 
 @media (max-width: 706px) {
 
-  .menu, .sign-in{
-    display: none;
+.menu, .sign-in{
+  display: none;
+}
+
+.nav{
+  background-color: rgb(0, 0, 0);
+  height: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100wh;
+  display:flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: 99;
+}
+
+#text {
+  transform: rotate(214deg);
+  position: absolute;
+  top: 130px;
+  left: -15%;
+  /* margin-left: 200px; */
+}
+
+#icon{
+  transform: rotate(-214deg);
+  /* position: relative; */
+  left: 45%;
+  top: 85px;
+}
+
+.first-container{
+  margin-top: 150px;
+}
+
+.chosen-images{
+  display: none;
+}
+
+.chosen-images-smaller-screen{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.smaller-screen{
+  display: contents;
+  color: white;
+  position: absolute;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  width: fit-content;
+  background-color: black;
+
+}
+
+li{
+    list-style: none;  
+    text-align: left;
   }
 
-  .nav{
-    background-color: rgb(0, 0, 0);
-    height: 150px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100wh;
-    display:flex;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    z-index: 99;
-  }
-  
-  #text {
-    transform: rotate(214deg);
-    position: absolute;
-    top: 130px;
-    left: -15%;
-    /* margin-left: 200px; */
-  }
+nav{
+  display: none;
+}
 
-  #icon{
-    transform: rotate(-214deg);
-    /* position: relative; */
-    left: 45%;
-    top: 85px;
-  }
+#nav-open{
+  margin-top: 50px;
+  margin-right: 30px;
+  width: 30px;
+  object-fit: cover;
+  cursor: pointer;
+}
 
-  .chosen-images{
-    display: none;
-  }
-
-  .chosen-images-smaller-screen{
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
 
 }
 
@@ -189,4 +274,3 @@ button:hover {
 
 
 
-  

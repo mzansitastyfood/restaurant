@@ -1,0 +1,451 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: rgb(181, 202, 160);
+    width: wh;
+  
+  }
+     
+  
+  .nav{
+    background-color: rgb(0, 0, 0);
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100wh;
+    display:flex;
+    color: white;
+    z-index: 99;
+  }
+  
+  #text {
+    transform: rotate(214deg);
+    position: absolute;
+    top: 130px;
+    left: 30px;
+    margin-left: 200px;
+  }
+  
+  #text span {
+    font-size: px;
+    height: 170px;
+    position: absolute;
+  }
+  
+  #icon{
+    transform: rotate(-214deg);
+    position: relative;
+    top: 85px;
+  }
+  
+  .menu{
+    position: absolute;
+    left: 0;
+    margin-top: 50px;
+    margin-left: 450px;
+  }
+  
+  .sign-in{
+    position: absolute;
+    right: 0;
+    margin-top: 50px;
+    margin-right: 50px;
+  }
+  
+  
+  #t10 { transform: rotate(97deg); }
+  #t11 { transform: rotate(104deg); }
+  #t12 { transform: rotate(110deg); }
+  #t13 { transform: rotate(116deg); }
+  #t14 { transform: rotate(122deg); }
+  #t15 { transform: rotate(128deg); }
+  #t16 { transform: rotate(134deg); }
+  #t17 { transform: rotate(140deg); }
+  #t18 { transform: rotate(146deg); }
+  #t19 { transform: rotate(152deg); }
+  #t20 { transform: rotate(158deg); }
+  #t21 { transform: rotate(164deg); }
+  #t22 { transform: rotate(170deg); }
+  #t23 { transform: rotate(176deg); }
+  #t24 { transform: rotate(182deg); }
+  #t25 { transform: rotate(188deg); }
+  #t26 { transform: rotate(194deg); }
+  
+  .first-container {
+    width: 100wh;
+    height: 50px;
+    background-color: forestgreen;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    color: white;
+    padding: 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 120px;
+    position: fixed;
+    z-index: 99;
+  }
+  
+  /* Slogan style */
+  .first-container .company-slogan{
+    font-weight:bolder;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  /* Button next to slogan style */
+  .first-container .company-slogan .start-order-button{
+    color:white;
+    background-color: red;
+    border: none;
+    border-radius: 5em;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+  /* Fixing the buttons */
+button{
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05); /* Scale the button to 105% of its original size */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+
+
+.smaller-screen{
+  display: none;
+}
+
+.chosen-images-smaller-screen{
+  display: none;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 706px) {
+
+  .menu, .sign-in{
+    display: none;
+  }
+  
+  .nav{
+    background-color: rgb(0, 0, 0);
+    height: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100wh;
+    display:flex;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 99;
+  }
+  
+  #text {
+    transform: rotate(214deg);
+    position: absolute;
+    top: 130px;
+    left: -15%;
+    /* margin-left: 200px; */
+  }
+  
+  #icon{
+    transform: rotate(-214deg);
+    /* position: relative; */
+    left: 45%;
+    top: 85px;
+  }
+  
+  .first-container{
+    margin-top: 150px;
+  }
+  
+  .chosen-images{
+    display: none;
+  }
+  
+  .chosen-images-smaller-screen{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .smaller-screen{
+    display: contents;
+    color: white;
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    width: fit-content;
+    background-color: black;
+  
+  }
+  
+  li{
+      list-style: none;  
+      text-align: left;
+    }
+  
+  nav{
+    display: none;
+  }
+  
+  #nav-open{
+    margin-top: 50px;
+    margin-right: 30px;
+    width: 30px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+}
+
+  
+/* Container for the inner content */
+.container{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    align-content: center;    
+}
+
+/* Style for the inner core content */
+.center{
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    align-content: center;
+    background-color:#218D1F;
+    width: fit-content;
+    padding: 5%;
+}
+
+form .inside-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+/* Style for the form content */
+
+button{
+    background-color: #218D1F;
+    color: white;
+    font-weight: bold;
+    width: 180px;
+    height: 40px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    /* Button styles on hover */
+    background-color: #1c7fdb;
+}
+
+button:active {
+    /* Button styles when pressed */
+    animation: flicker 0.1s infinite;
+}
+
+
+.name{
+    margin-top: 5%;
+}
+
+.surname{
+    margin-top: 3%;
+}
+
+.roleSelect{
+    margin-top: 3%;
+}
+
+.email{
+    margin-top: 3%;
+}
+
+.password{
+    margin-top: 5%;
+}
+
+.confirmPassword{
+    margin-top: 3%;
+}
+
+.sign_up_button{
+    margin-top: 4%;
+    cursor: pointer;
+    font-size: smaller;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+form{
+    width: max-content; 
+}
+
+form label{
+    width: 440px;
+    height: 20px;    
+    font-family:Arial, Helvetica, sans-serif;
+    /* font-style: normal; */
+    /* font-size: 90%;              */
+    /* line-height: 20px; */
+    
+    /* display: flex; */
+    align-items: start;
+    /* font-feature-settings: 'salt' on;     */
+    color: white;    
+    /* flex: none; */
+    /* order: 0; */
+    /* align-self: stretch; */
+    /* flex-grow: 0; */
+    word-spacing: nowrap;
+}
+
+form input{
+    box-sizing: border-box;    
+    width: 200px;
+    height: 30px;
+    background: #FFFFFF;    
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+}
+
+form button{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    height: 40px;
+    background: #0E4371;
+    border: 1px solid #0E4371;
+    border-radius: 6px;
+    /* flex: none; */
+    /* order: 0; */
+    /* align-self: stretch; */
+    /* flex-grow: 0; */
+    cursor: pointer;
+}
+.container span{
+    /* width: 65px; */
+    /* height: 24px; */
+    font-family:Arial, Helvetica, sans-serif;
+    /* font-weight: 500; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* text-align: center; */
+    /* font-feature-settings: 'salt' on; */
+    color: #FFFFFF;
+    /* flex: none; */
+    /* order: 1; */
+    /* flex-grow: 0; */
+}
+
+.or{
+    margin-left: 222px;
+    width: 14px;
+    height: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    font-feature-settings: 'salt' on;
+    color: #9CA3AF;
+}
+
+.invalidInput{
+    color: red;
+    font-size:smaller;
+    width: 445px;
+}
+
+.invalidInputS{
+    color: red;
+    font-size:smaller;
+    width: 445px;
+}
+
+.invalidInputE{
+    color: red;
+    font-size:smaller;
+    width: 445px;
+}
+
+
+
+.name div{
+    font-size: smaller;
+    color: red;
+}
+
+.surname div{
+    font-size: smaller;
+    color: red;
+}
+
+.email div{
+    font-size: smaller;
+    color: red;
+}
+
+.password div{
+    font-size: smaller;
+    color: red;
+}
+
+.confirmPassword div{
+    font-size: smaller;
+    color: red;
+}
+
+
+.other_Or{
+    /* margin-left: 100px; */
+    width: 14px;
+    height: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: blue;
+}
