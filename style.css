@@ -666,6 +666,15 @@ button:hover {
   background-color: #218D1F;
   }
 
+  .pane{
+    margin-bottom: 5%;
+    width:fit-content;
+  }
+
+  .pane a{
+    padding-bottom: 5%;
+  }
+
   .how-hungry-container{
     flex-direction: column;
   }
